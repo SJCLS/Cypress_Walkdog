@@ -10,7 +10,7 @@ describe('cadastro', () => {
       cy.get(':nth-child(4) > :nth-child(2) > input').type(' Lote 47 Quadra 145');
       cy.get('.walker-service > :nth-child(1)').click();
       cy.get('.walker-service > :nth-child(2)').click();
-      cy.get('.dropzone > input').attachFile('img.png');
+      cy.get('.dropzone > input').attachFile('image.png');
       cy.get('.button-register').click();
     });
 
@@ -25,7 +25,7 @@ describe('cadastro', () => {
       cy.get(':nth-child(4) > :nth-child(2) > input').type(' Lote 47 Quadra 145');
       cy.get('.walker-service > :nth-child(1)').click();
       cy.get('.walker-service > :nth-child(2)').click();
-      cy.get('.dropzone > input').attachFile('img.png');
+      cy.get('.dropzone > input').attachFile('image.png');
       cy.get('.button-register').click();
       cy.get('.alert-error').should('have.text','CPF inválido')
     });
@@ -50,7 +50,7 @@ describe('cadastro', () => {
       cy.get(':nth-child(4) > :nth-child(2) > input').type('  ');
       cy.get('.walker-service > :nth-child(1)').click();
       cy.get('.walker-service > :nth-child(2)').click();
-      cy.get('.dropzone > input').attachFile('img');
+      cy.get('.dropzone > input').attachFile('image');
       cy.get('.button-register').click();
       cy.get(':nth-child(3) > :nth-child(2) > .alert-error').should('have.text','CPF inválido')
       cy.get(':nth-child(4) > :nth-child(1) > .alert-error').should('have.text','Informe um número maior que zero')
